@@ -9,7 +9,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/ruiqia.php';
 // ruiqia_die('正在修改');
 
 // 连接数据库
-ruiqia_db('mysql','localhost','bangbangdream','bangbangdream','N6g8C8b8');
+ruiqia_db('mysql','localhost','bangbangdream','root','818903ai');
 // 启动mysql操作session
 ruiqia_session(3600*30*24);
 
