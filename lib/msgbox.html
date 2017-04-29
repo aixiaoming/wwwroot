@@ -1,0 +1,190 @@
+﻿<html>
+<head>
+<title>msgbox测试中心</title>
+<meta content="text/html; charset=utf-8" http-equiv=content-type>
+<style>
+body{ background:#ccc;}
+#test span {
+	padding: 10px;
+	background-color: #666;
+	margin: 3px;
+	float: left;
+	color: #fff
+}
+#test, textarea {
+	font-size: 12px;
+	border:none;
+}
+</style>
+<link rel=stylesheet type=text/css href="msgbox.css">
+<script type=text/javascript src="jquery-2.1.4.min.js"></script>
+<script type=text/javascript src="msgbox.js"></script>
+<script>$(function(){$("#test input").click(function(){var index=$("#test input").index($(this));eval($("#test textarea").eq(index).val());});});</script>
+<meta>
+</head>
+<body>
+<div id=test> <br>
+  <br>
+  <span>最简单的调用方式：<br>
+  <textarea id=textarea rows=12 cols=30 name=textarea>$.msgbox("");	
+//the string is directly allocated as this:
+//$.msgbox("hello, world!")</textarea>
+  <br>
+  <input id=button value=运行 type=button name=button>
+  提示：可修改部分代码后运行</span><span>文本提示：<br>
+  <textarea id=textarea rows=12 cols=30 name=textarea>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'hello, world!',
+	type :'text'
+});	</textarea>
+  <br>
+  <input id=button value=运行 type=button name=button>
+  提示：可修改部分代码后运行</span><span>警告框：<br>
+  <textarea id=textarea rows=12 cols=30 name=textarea>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:130,
+	width:250,
+	content:'hello, world!',
+	type :'alert',
+	bgAnimate: false, // 禁止背景动画
+	boxAnimate: false, // 禁止提示框动画
+	enableDrag: false // 禁止拖拽
+});	</textarea>
+  <br>
+  <input id=button value=运行 type=button name=button>
+  提示：可修改部分代码后运行</span><span>确认框：<br>
+  <textarea id=textarea rows=12 cols=30 name=textarea>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:130,
+	width:250,
+	content:'hello, world?',
+	type :'confirm',
+	onClose:function(v){
+		if(v) alert("you've clicked 'yes' button!");
+		else alert("you've clicked 'no' button or closed me!");
+	}
+});	</textarea>
+  <br>
+  <input id=button value=运行 type=button name=button>
+  提示：可修改部分代码后运行</span><span>自动关闭：<br>
+  <textarea id=textarea rows=12 cols=30 name=textarea>$.msgbox({
+	autoClose:10,
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'hello, world!',
+	type :'text'
+});	</textarea>
+  <br>
+  <input id=button2 value=运行 type=button name=button2>
+  提示：可修改部分代码后运行</span><span>关闭后事件(可见确认框)：<br>
+  <textarea id=textarea rows=12 cols=30 name=textarea>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'hello, world!',
+	type :'text',
+    onClose: function(){alert('你居然把我关了!')}
+});	</textarea>
+  <br>
+  <input id=button2 value=运行 type=button name=button2>
+  提示：可修改部分代码后运行</span> <span>ajax：<br>
+  <textarea id=textarea2 rows=12 cols=30 name=textarea2>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'http://ruiqia.com',
+	type :'ajax',
+    title: '瑞洽盒子'
+});	</textarea>
+  <br>
+  <input id=button3 value=运行 type=button name=button3>
+  提示：可修改部分代码后运行</span> <span>ajax完成后事件：<br>
+  <textarea id=textarea3 rows=12 cols=30 name=textarea3>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'http://ruiqia.com',
+	type :'ajax',
+    title: '瑞洽盒子',
+    onAjaxed: function(data){alert(data)}
+});	</textarea>
+  <br>
+  <input id=button4 value=运行 type=button name=button4>
+  提示：可修改部分代码后运行</span> <span>iframe<br>
+  <textarea id=textarea4 rows=12 cols=30 name=textarea4>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'outClose.html',
+	type :'iframe',
+    title: '网页框架'
+});	
+</textarea>
+  <br>
+  <input id=button5 value=运行 type=button name=button5>
+  提示：可修改部分代码后运行</span> 
+  
+  
+  
+  
+  
+  
+  
+  <span>input：<br>
+  <textarea id=textarea5 rows=12 cols=30 name=textarea5>$.msgbox({
+	closeImg: '/images/close.gif',
+	height:500,
+	width:600,
+	content:'请输入: ',
+	type :'input',
+	title: '请输入一个值',
+	onInputed: function(v){alert('你输入的是:'+v)}
+});	</textarea>
+  <br>
+  <input id=button6 value=运行 type=button name=button6>
+  提示：可修改部分代码后运行</span> 
+  
+  
+  
+  
+  
+  
+<span>快捷iframe：<br>
+      <textarea id=textarea5 rows=12 cols=30 name=textarea5>ruiqia_window('http://baidu.com','这里是标题',500,600);
+      //500,600 为指定高和宽，不写则自动适配浏览器大小 
+  </textarea>
+<br>
+  <input id=button6 value=运行 type=button name=button6>
+  提示：可修改部分代码后运行</span> 
+  
+  
+  
+    
+<span>从外部关闭提示框：<br>
+      <textarea id=textarea5 rows=12 cols=30 name=textarea5>close_ruiqia_window('关闭前的提示');
+      //提示参数可以为空
+      
+      
+      // 外部关闭提示框代码:  最简单的方式 $.closemsgbox(top.window.document)
+// $.closemsgbox({
+// document : top.window.document,
+//  bgAnimate: true,    // 允许背景动画
+//  boxAnimate: true,  // 允许提示框动画
+//  onClose: function()  // 关闭时的事件
+//});
+  </textarea>
+<br>
+  <input id=button6 value=运行 type=button name=button6>
+  提示：可修改部分代码后运行</span> 
+  
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

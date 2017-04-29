@@ -1,0 +1,67 @@
+/*控制器弹出操作窗口样式表*/
+@import url("http://zhineng.ruiqia.com/iconfont/iconfont.css");
+
+
+.msgbox_wrapper {
+	background-color: #F1F1F1; overflow: hidden; vertical-align:top;
+    -webkit-box-shadow: #000 0px 0px 0px;
+    -moz-box-shadow: #000 0px 0px 0px;
+    box-shadow: #000 0px 0px 0px;
+    behavior: url(/PIE.htc);
+    -webkit-border-radius: 4px;  -moz-border-radius: 4px;   border-radius:4px;
+}
+
+
+.msgbox_title_wrapper {
+	list-style-type:none;margin:0; height:30px;  color:#999;
+	 vertical-align: middle; padding:4px; 	cursor: move !important; 
+}
+.msgbox_title_wrapper img {
+  	position:static;
+  	+position:relative;
+  	vertical-align:middle;
+  	margin-top:7px;
+}
+.msgbox_title {
+	float:left; line-height: 30px; height:30px; padding-left: 6px;   font-size: 14px; 
+}
+.msgbox_close {
+	float:right;line-height:38px; height:38px; width:48px; display:table-cell;  font-size: 14px;
+	cursor:pointer; margin-right: -8px; margin-top: -4px; text-align: center;
+}
+.msgbox_close:hover{ /*background-color:rgba(0,0,0,0.2);*/ color: #ff0000;}
+
+.msgbox_main {
+	text-align: center; padding: 0px;color: #f00; overflow: auto; margin: 0px; 
+}
+.msgbox_bg {
+	background-color: #000;
+}
+.msgbox_button {
+	border: 1px solid #069; 
+	padding:8px 15px;
+	-webkit-border-radius: 3px;  
+	-moz-border-radius: 3px;  
+	border-radius:3px; 
+    color: #069;
+    background: #fff; 
+    cursor: pointer;
+    outline: none;
+}
+.msgbox_button:hover {
+    -webkit-transition: all 0.3s ease-in;-moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;
+    color: #fff;
+    background: #069; 
+    outline: none;
+}
+.msgbox_inputbox {
+	border: 1px solid #069; padding:5px 10px;
+	-webkit-border-radius: 3x;  -moz-border-radius: 3px;  border-radius:3px; 
+}
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+<? if(!class_exists('ruiqia_template')) header('HTTP/1.1 404 Not Found'); ?>

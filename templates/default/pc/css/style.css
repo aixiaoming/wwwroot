@@ -1,0 +1,29 @@
+﻿
+/* 效果CSS开始 */*/
+.inkPhoBox { width: 310px; margin: 0px; height: 310px; }
+.inkPhoBox .main{ width:310px;}
+.inkPhoBox .mod18{width:310px; position:relative;}
+.inkPhoBox #prev{ background: url(../images/m2pic_btn1.jpg) no-repeat; height: 18px; width: 11px; position: absolute; z-index: 99; left:4px; top: 35px; cursor: pointer; }
+.inkPhoBox #next{ background: url(../images/m2pic_btn2.jpg) no-repeat; height: 18px; width: 11px; position: absolute; z-index: 99; top: 35px; right:4px; cursor: pointer; }
+.inkPhoBox .mod18 #prevTop{display:none}
+.inkPhoBox .mod18 #nextTop{display:none}
+.inkPhoBox .mod18 li{float:left;  overflow: hidden; vertical-align:middle;}
+.inkPhoBox .mod18 .cf li{position:relative;color:#fff;}
+/*.inkPhoBox .mod18 .cf a{display:block;width:260px;height:200px;position:absolute;color:#fff;}*/
+/*.inkPhoBox .mod18 .cf li span{display:block;width:220px;position:absolute;left:0;bottom:0;padding:7px 0px;line-height:22px;text-align:left;background:rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = "#60000000",endColorstr = "#60000000");}*/
+.inkPhoBox .mod18 .cf img {padding:0px; margin:0px; max-width: 310px; max-height:220px;}
+.inkPhoBox .bigImgBox{width:220px; height: 220px;}
+.inkPhoBox .mod18 .picBox{width:310px; height: 220px; position: relative; overflow: hidden;}
+.inkPhoBox .mod18 .picBox ul{height:220px; padding:0px; margin:0px; position:absolute; left:0;}
+.inkPhoBox .mod18 .picBox li{ width: 310px; height: 220px; text-align:center;}
+.inkPhoBox .smImgBox{ width:310px; height: 81px; padding: 5px 0px 0px; position: relative; background: #F1F1F1;  }
+.inkPhoBox .mod18 .listBox{ width: 250px; height: 81px; margin: 0 auto; position: relative; overflow: hidden;}
+.inkPhoBox .mod18 .listBox ul{height:81px;position:absolute;}
+.inkPhoBox .mod18 .listBox li{ width: 50px; height: 81px; cursor: pointer; position: relative; padding: 0 10px 0 0;}
+.inkPhoBox .mod18 .listBox li i{display:none;}
+/*.inkPhoBox .mod18 .listBox li a{display:block;width:40px;height:20px;}*/
+.inkPhoBox .mod18 .listBox li img{ border: 3px solid #D3D3D3; width: 50px; height: 40px; margin-top: 6px;}
+.inkPhoBox .mod18 .listBox .on img{ width: 50px; height: 40px; background: url(../images/ink_imgbg.jpg) no-repeat center top; padding: 8px 0px 3px; border-width: 0px; border-style: none; margin: 0px 0px  10px;}
+.inkPhoBox .mod18 .listBox .on i{display:block;}
+.inkPhoBox .left_top { font-family:Arial; font-size:32px; color:#fff; text-align:center; height:30px; line-height:30px; background:#333}
+/* 效果CSS结束 */

@@ -1,0 +1,560 @@
+﻿@charset "utf-8";
+@import url("http://zhineng.ruiqia.com/iconfont/iconfont.css");
+/*
+绿
+#00C695
+绿 亮
+#00D29E
+绿 暗
+#00A67C
+
+
+
+青
+#2ECC71
+青 亮
+#55D98D
+青 暗
+#29BA67
+
+瑞洽红
+#FF4A00
+瑞洽红 亮
+#FF550D
+瑞洽红 暗
+#DB3700
+
+
+边框颜色
+#C7CACE
+*/
+
+/*****************************************通用元素***********************************************/
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+  display: block
+}
+audio, canvas, video {
+  display: inline-block;
+*display:inline;
+*zoom:1
+}
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+[hidden] {
+ display: none
+}
+
+
+b, strong {
+  font-weight: bold
+}
+small {
+  font-size: 80%
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline
+}
+sup {
+  top: -0.5em
+}
+sub {
+  bottom: -0.25em
+}
+img {
+  width: auto\9;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic
+}
+
+a:hover, a:focus {
+  COLOR: #C00;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+.clearfix {
+*zoom:1
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0
+}
+.clearfix:after {
+  clear: both
+}
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+* { margin:0; padding:0; }
+
+img { border:none; }
+    
+
+
+html { font-size: 100%;  -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%; margin:0; padding:0;}
+body{
+  overflow-x:hidden; 
+  overflow-y:hidden;
+  font-family: '微软雅黑' !important;
+  margin: 0px; padding: 30px 15px; 
+  font: 14px/1.5 arial, "Microsoft Yahei", "Hiragino Sans GB",  sans-serif ,arial;
+  color: #fff;
+
+    width: 100%;
+  height: 100%;
+  display: -moz-box;
+  display: -webkit-box;
+  -moz-box-align:center;
+  -webkit-box-align:center;
+   -moz-box-pack:center;
+  -webkit-box-pack:center;
+
+} 
+
+
+a {font-family: '微软雅黑'; color: #fff;}
+
+    
+ /*
+
+    Supersized - Fullscreen Slideshow jQuery Plugin
+    Version : 3.2.7
+    Site    : www.buildinternet.com/project/supersized
+    
+    Author  : Sam Dunn
+    Company : One Mighty Roar (www.onemightyroar.com)
+    License : MIT License / GPL License
+    
+                */   
+                #supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(img/progress.gif) no-repeat center center;}
+                
+                #supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+                #supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+                #supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }   /*Speed*/
+                #supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }           /*Quality*/
+                
+                #supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
+                #supersized a { width:100%; height:100%; display:block; }
+                #supersized li.prevslide { z-index:-20; }
+                #supersized li.activeslide { z-index:-10; }
+                #supersized li.image-loading { background:#111 url(images/progress.gif) no-repeat center center; width:100%; height:100%; }
+                #supersized li.image-loading img{ visibility:hidden; }
+                #supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+                
+                
+                #supersized img { max-width: none !important }
+
+
+
+
+
+
+
+.logo {
+    background: url(/images/logo.png) no-repeat center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    border-radius:50%;
+    background-color: #FF4A00;
+    margin-bottom: 45px !important;
+    margin-top: 0px !important;
+    
+    cursor: pointer;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    /* X轴偏移1像素、Y轴偏移2像素、不透明度为0.9的黑色文本阴影 */
+    text-shadow: rgba(0,0,0,0.9) 0px 1px 2px;
+    /*
+    使用多层阴影实现按钮立体效果
+    第一层：Y轴偏移1像素、不透明度为0.25的白色外阴影效果
+    第二层：Y轴偏移1像素、不透明度为0.25的白色内阴影效果
+    第三层：偏移位0、不透明度为0.25的黑色外阴影效果
+    第四层：Y轴偏移20像素、不透明度为0.03的白色内阴影效果
+    第五层：X轴偏移-20像素、Y轴偏移20像素、不透明度为0.15的黑色内阴影效果
+    第六层：X轴偏移20像素、Y轴偏移20像素、不透明度为0.05的白色内阴影效果
+    */
+    box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    /* 让变化的属性在100毫秒内匀速过渡 */
+    transition: all 0.1s linear;
+}
+
+
+.logo:hover {
+  background-color: #FF550D;
+  -webkit-transition: all 0.3s ease-in;-moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;
+   /*
+    鼠标悬停时的按钮多层阴影效果，和按钮默认时相比只是第一层有变化：
+    第一层：X轴偏移2像素、Y轴偏移5像素、不透明度为0.5的黑色外阴影效果
+    */
+    box-shadow: rgba(0,0,0,0.5) 0px 2px 5px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+}
+ 
+
+
+
+#container{
+  width:350px; 
+  height: 520px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  margin-top: -260px;
+  margin-left: -175px;
+  text-align: center;
+}
+#container h1{ font-weight: 400; text-align: center;}
+
+@media all and (max-width: 540px) {
+/*去除苹果手机input内部上面的阴影*/
+input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+        -webkit-appearance: caret;
+        /*-moz-appearance: caret;  */}
+
+    #container{width:90%; margin:0px auto; margin-bottom:450px !important; 
+       position:relative;   top: 0;  left:0;
+
+    }
+
+}
+
+
+
+
+
+ul,li{list-style: none;  margin:0px; padding:0px;}
+
+
+a{text-decoration: none;color: #000;font-size: 14px;}
+li:hover{ -webkit-transition: all 0.3s ease-in;-moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;}
+
+
+
+/*登陆 注册 密码找回 选项夹*/
+#tab{ overflow:visible; background-color:#000000;  background-color:rgba(0,0,0,0.2);  margin: 0px;  margin-bottom: 10px;
+  overflow: hidden;  width: auto; -webkit-border-radius: 6px;    -moz-border-radius: 6px;    border-radius:6px;   }
+#tab a{height:32px !important;line-height:32px !important; color:#fff; float:left;overflow: hidden;position: relative; cursor: pointer;display: block;padding: 0 0px;outline: none; width: 25%; text-align: center; font-size: 14px;  color:#fff;height:32px;line-height:32px;width: 33.333%;}
+#tab a:hover {background-color:#000000;  background-color:rgba(0,0,0,0.1);}  
+
+#tab .act {background-color:#000000;  background-color:rgba(0,0,0,0.1);}
+
+
+
+
+/*输入框前的图标*/
+.icon-input{
+  background:none;
+  background-color:transparent;
+  background-image: none;
+  background-position: center center;
+  width: 20px;
+  height: 20px;
+  margin-top: -34px;
+  margin-left: 10px;
+  position: absolute;
+  color: #eee;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
+
+
+input:-moz-placeholder { color: #BBB; }
+input:-ms-input-placeholder { color: #BBB; }
+input::-webkit-input-placeholder { color: #BBB; }
+
+input[disabled]{
+/*border:1px solid #2ECC71;*/
+color: #fff;
+}
+
+
+
+.connect {
+    margin: 25px auto 0 auto;
+    font-weight: 400;
+    text-align: center;
+    padding: 0px;
+}
+
+.connect a {
+    display: inline-block;
+    margin-right: 20px;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+    font-size: 30px !important;
+    color: #ccc !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+.connect_info h1{font-weight: 400;}
+.connect_info img{ border-radius: 5px; margin-right: 15px; width: 40px;}
+
+.connect a:hover { background-position: center bottom; color: #FFf !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*标签*/
+label{
+ font-size: 14px;
+    outline: none;
+    margin: 0px;
+    display: block;
+  padding:2px 0px;
+  color: #A9A9A9;
+}
+
+
+
+
+/*输入框*/
+input,textarea {
+   
+    padding:0px 10px !important; 
+    height: 38px;
+    line-height: 38px;
+    margin: 0px;
+    -webkit-border-radius: 4px; -moz-border-radius: 4px;  border-radius:4px; 
+    color: #000;
+    background: #fff; 
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    padding-left: 40px !important;
+    margin-top: 15px;
+    padding: 0 15px;
+    background: #000; /* browsers that don't support rgba */
+    background: rgba(0,0,0,.25);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 0px solid #3d3d3d; /* browsers that don't support rgba */
+    border: 0px solid rgba(255,255,255,.15);
+/*    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;*/
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+
+.captcha {padding: 0px; margin:0px; margin-top: 15px; }
+.captcha input{ width: 260px;  float: left; margin-top: 0px;}
+.captcha label{margin-top:5px;}
+#Captcha_img{    
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    height: 36px;
+    z-index: 999;
+  }
+
+
+
+
+
+
+
+textarea {
+    padding:10px 10px !important; 
+    height: 100px;
+    line-height: 20px;
+
+}
+
+
+input:hover,textarea:hover{
+    -webkit-transition: all 0.3s ease-in;-moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;
+
+    border: 0px solid #FFF; 
+    outline: none;
+  
+
+
+
+
+}
+
+input:focus,textarea:focus {
+  background: #000000; /* browsers that don't support rgba */
+    background: rgba(0,0,0,.45);
+  outline: none;
+   
+}
+input:active,textarea:active {
+  outline: none;
+  border: 0px solid #2ECC71; 
+}
+
+
+
+
+
+/*下拉选择框*/
+
+.styled-select select {
+    border: 1px solid #C7CACE !important;
+    padding:0px 10px !important; 
+    height: 38px;
+    line-height: 38px;
+    margin: 0px;
+   margin-bottom: 10px;
+   -webkit-border-radius: 4px; -moz-border-radius: 4px;  border-radius:4px; 
+   width: 100%; 
+   color: #000;
+   background: #fff; 
+   cursor: pointer;
+   outline: none; 
+   -webkit-appearance: none; /*for chrome*/
+   overflow: hidden;
+   background: url(/images/new_arrow.png) no-repeat right #fff;
+}
+.styled-select select option{background: #00A67C; color: #fff; padding: 20px 5px; margin: 0px; height: 40px; line-height: 40px;}
+
+
+
+
+
+
+/*按钮*/
+button {
+        padding:0px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        width: 100%;
+        font-size: 18px;
+        margin: 0px;
+        text-decoration: none;
+        font-family: '微软雅黑' !important;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        margin-top: 7px;
+        letter-spacing:8px;
+        cursor: pointer;
+        margin-top: 25px;
+        padding: 0;
+        background: #2ECC71;
+        /*background: none;*/
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        /*border: 1px solid #ff730e;*/
+        -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+        -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+        box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0,0,0,.1);
+        -o-transition: all .2s;
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -ms-transition: all .2s;
+}
+button:hover {
+    -webkit-transition: all 0.3s ease-in;-moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;
+    background: #55D98D; 
+    outline: none;
+    border: none;
+}
+
+
+
+
+button:focus {
+  border: none !important;
+  outline: none;
+}
+button:active {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom{ position: fixed; 
+  bottom: 0px; 
+  -webkit-border-radius: 0px;  
+  -moz-border-radius: 0px;  
+  border-radius:0px; 
+  z-index: 999; width: 100%;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************底部版权********************************/
+.loginCopyright {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: 999;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
