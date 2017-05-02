@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>【帮帮律师团】- 帮帮校园网</title>
-	<link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
 	<link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
 

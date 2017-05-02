@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>法援在线-帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/mobile/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
     <script type="text/javascript">
     function disp_alert()

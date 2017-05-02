@@ -29,8 +29,8 @@ header .span span{font-size: 1.25em;color: #ffffff;}*/
 #reg_container .captcha{width: 48%;}
 #reg_container img{margin-top: 3%;float: right;margin-right:5%;}
 #reg_container footer{text-align: center;margin-top:100px;}
-#reg_container .radio1{height: 16px;width: 16px;float: left;margin-left:15%;}
-#reg_container .radio2{height: 16px;width: 16px;margin-left: 20%;}
+#reg_container .radio1{height: 16px;width: 16px;float: left;margin-left:10%;margin-top: 1%;}
+#reg_container .radio2{height: 16px;width: 16px;float: left;margin-left:10%;margin-top: 1%;}
 #reg_container footer{text-align:center;margin-top:50px;}
 #reg_container #form #zphone{width: 40%;height: 40px;border-width: 1px;border-radius:4px;padding:0px;margin:0px;}
 #reg_container #form #zphone:hover{background: #f58710;cursor: pointer;color: #fff;}

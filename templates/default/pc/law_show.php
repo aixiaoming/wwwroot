@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>【法援在线】- 帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
     <link rel="stylesheet" type="text/css" href="$dir/style.css">
     <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>

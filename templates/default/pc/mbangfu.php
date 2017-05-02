@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>【创业帮扶】- 帮帮校园网</title>
-	<link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
 </head>
 <body>
 

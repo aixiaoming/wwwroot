@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>【招聘应聘-我的发布】- 帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/mobile/user_style.css">
     <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
 </head>

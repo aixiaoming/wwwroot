@@ -5,7 +5,7 @@
 	<title>营业执照</title>	
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
     <style type="text/css">
     .img{margin:auto!important;margin-top: 30px!important;}

@@ -32,4 +32,3 @@ $template->mobile = true;
 // 解释皮肤
 include $template->getfile(ruiqia_self());
 ?>
-

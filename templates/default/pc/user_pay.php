@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>【企业VIP会员】- 帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">

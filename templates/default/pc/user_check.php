@@ -3,7 +3,7 @@
     <title>【会员申请】- 帮帮校园网</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
 </head>
@@ -106,10 +106,10 @@
     </div>
     <!-- <div class="picture"> -->
         <div class="img1">
-           <img src="/data/idcard/$user['id'].jpg" onerror=this.src="/data/idcard/idcard.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
+           <img src="/data/idcard/$user['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" onerror=this.src="/data/idcard/idcard.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
         </div>
         <div class="img2">
-          <img src="/data/student/$user['id'].jpg" onerror=this.src="/data/idcard/student.png" id="userlogoimg2" onclick="document.getElementById('fileupload2').click()">
+          <img src="/data/student/$user['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" onerror=this.src="/data/idcard/student.png" id="userlogoimg2" onclick="document.getElementById('fileupload2').click()">
         </div>
     <!--  </div> -->
     <div class="bar">
@@ -138,7 +138,7 @@
         <label>图片上传</label>
     </div>
     <div class="img">
-        <img src="/data/idcard/$user['id'].jpg" onerror=this.src="/data/idcard/license.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
+        <img src="/data/idcard/$user['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" onerror=this.src="/data/idcard/license.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
     </div>
     
     <div class="bar">
@@ -341,7 +341,7 @@ $(".submit").click(function() {
 
              // 没有发送到服务器
              error:function(msg)
-             {  
+             {  console.log(msg);
                  swal('提交失败', '请刷新页面再试试'  , 'error');
          
             },

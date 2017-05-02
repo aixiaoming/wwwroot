@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>会员期限-帮帮校园网</title>
-	<link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 	<script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">

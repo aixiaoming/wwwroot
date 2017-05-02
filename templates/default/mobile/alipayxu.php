@@ -34,7 +34,6 @@
                 <input type="submit" value="确认支付"  style="width:150px;height: 40px;background-color: #f58710;border:0px;font-size: 16px;color: #fff;border-radius: 4px;cursor: pointer;margin-top: 60px;padding-left:0px;">
            
             </form>
-                </form>
         <!--{/if}-->
 
         <!--{if is_weixin()}-->

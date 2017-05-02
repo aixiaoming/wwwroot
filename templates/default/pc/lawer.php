@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>【帮帮律师团】- 帮帮校园网</title>
-	<link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
 </head>
@@ -26,10 +26,10 @@
         <li><a href="user_profile.php"> 个人资料</a></li>
         <li><a href="user_safe.php"> 安全设置</a></li>
         <li  class="click"><label>我的发布</label>
-        <img src="/templates/default/pc\images/xia.png" class="publish"  style="display:none;">
-        <img src="/templates/default/pc\images/shang.png" class="publish"> 
+        <img src="/templates/default/pc\images/xia.png" class="publish">
+        <img src="/templates/default/pc\images/shang.png" class="publish" style="display:none;">
         </li>
-        <div class="publish">
+        <div class="publish" style="display: none">
         <li  class="side_center"><a href="published_goods.php">校园二手</a></li>
         <li class="side_center"><a href="published_schoolnear.php">校园周边</a></li>
         <li class="side_center"><a href="published_active.php">校园活动</a></li>
@@ -147,22 +147,6 @@
 </div>                       
 
 
-<!-- <div class="list">
-<img src="/templates/default/pc\images/law.png">
-	<div class="left">
-		<label>姓名：孙卫宏</label><br>
-		<label>电话：86-10-65288888</label><br>
-		<label>传真：86-10-65226989</label><br>
-		</div>
-	<div class="right">
-		<label>职务：主任</label><br>
-		<label>办公地点：北京总部</label><br>
-		<label>邮箱：sunwh@splf.com.cn</label>
-		<label>　　更多信息>></label>
-	</div>
-</div> -->
-
-
 </div>
 
 
@@ -193,7 +177,7 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 	$(".click1").click(function(){
-	    $(".publish1").slideToggle("slow");
+      $(".publish1").slideToggle("slow");
 	  });
 	});
 	</script>

@@ -41,11 +41,11 @@
 		    <span>通讯地址：</span>
 		    <label>$key['address']</label><br>
 		    <div class="card1">身份证：</div>
-		    <img src="/data/idcard/$key['id'].jpg" class="img">
+		    <img src="/data/idcard/$key['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" class="img">
 	    </div>
 	    <div class="right">
 		    <div class="card">学生证：</div>
-		    <img src="/data/student/$key['id'].jpg">
+		    <img src="/data/student/$key['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->">
 		</div>
 	    <form class="form" method="post"  action="check_return.php">
 		    <input name="opinion" type="radio" value="agree" />同意

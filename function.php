@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 
 // include 'D:\wwwroot\bangbangdream\wwwroot\ruiqia.php';
@@ -38,7 +38,7 @@ $area=$_GET['area'];
 if($area!=null AND ruiqia_noempty("SELECT * FROM area WHERE id=$area"))
 {
   $_SESSION['areaid'] = $area;
-  
+
 }
 
 if($area=='all')
@@ -61,8 +61,8 @@ if(!$_SESSION['areaid'])
 // 发送邮件
 function ruiqia_mail_i($sender,$email,$title,$content)
 {
-   ruiqia_mail($sender,'smtp.bangbangdream.com','mail@bangbangdream.com','LHLno18045', $email ,$title,$content); 
-  
+   ruiqia_mail($sender,'smtp.bangbangdream.com','mail@bangbangdream.com','LHLno18045', $email ,$title,$content);
+
 }
 
 
@@ -72,25 +72,35 @@ function is_right()
 {
 
   if(empty($_SESSION['userid']))
-  { 
+  {
     ruiqia_die('对不起，您还没有登录','返回登录界面','user_login.php');
-    
+
     exit();
 
 
   }else
   {
-              
+
               global $user;
               if (!$user=ruiqia_query_fetch("SELECT * FROM user WHERE id=" . $_SESSION['userid'] . "")) {
                  session_destroy();
                  header("location:/index.php");
-                 
+
                  exit();
                 }
     return true;
   }
 
+}
+
+//是否管理员(用户中心使用)
+
+function is_admin_user(){
+  is_right();
+  $user=ruiqia_query_fetch("SELECT * from user WHERE id='".$_SESSION['userid']."'");
+  if ($user['administrator']!=1) {
+    ruiqia_die('网站管理员未登录');
+  }
 }
 
 
@@ -153,7 +163,7 @@ function deldir($dir) {
       }
     }
   }
- 
+
   closedir($dh);
   //删除当前文件夹：
   if(rmdir($dir)) {
@@ -181,9 +191,9 @@ function imgup($imgurl,$imgname){
 // 自定义函数，试用goods等循环输出图片其中获得的参数为后台的check数据
 function loopimg($check){
   $num=0;
-  for ($i=0; $i <=10 ; $i++) { 
+  for ($i=0; $i <=10 ; $i++) {
     if ($check['img'.$i]!="") {
-     $num=$num+1; 
+     $num=$num+1;
      echo "<div class='delfloor' id='delfloor".$i."'><img src='".$check['img'.$i]."' style='height:125px !important; width:125px !important; margin-right:10px; display:block;'><input name='img".$i."' type='hidden' value='".$check['img'.$i]."'><a id='delimgurl' rel='".$i."' onclick=\"delimg($(this).attr('rel'),'".$check['img'.$i]."')\">删除</a></div>";
     }
   }
@@ -195,9 +205,9 @@ echo '<a id="imgnum" rel="'.$num.'" style="display:none;"></a>';
 
 function loopimgmb($check){
   $num=0;
-  for ($i=0; $i <=10 ; $i++) { 
+  for ($i=0; $i <=10 ; $i++) {
     if ($check['img'.$i]!="") {
-     $num=$num+1; 
+     $num=$num+1;
      echo "<div class='delfloor' id='delfloor".$i."'><img src='".$check['img'.$i]."' style='height:80px !important; width:80px !important; display:block;'><input name='img".$i."' type='hidden' value='".$check['img'.$i]."'><a id='delimgurl' rel='".$i."' onclick=\"delimg($(this).attr('rel'),'".$check['img'.$i]."')\">删除</a></div>";
     }
   }
@@ -207,7 +217,7 @@ echo '<a id="imgnum" rel="'.$num.'" style="display:none;"></a>';
 
 
 function loopimg1($check){
-  for ($i=0; $i <=10 ; $i++) { 
+  for ($i=0; $i <=10 ; $i++) {
     if ($check['img'.$i]!="") {
      echo "</br><img src='".$check['img'.$i]."' style='max-height:850px !important; max-width:850px !important; margin-right:10px;'><input name='img".$i."' type='hidden' value='".$check['img'.$i]."'>";
     }
@@ -215,7 +225,7 @@ function loopimg1($check){
 }
 
 function loopimg2($check){
-  for ($i=0; $i <=4 ; $i++) { 
+  for ($i=0; $i <=4 ; $i++) {
     if ($check['img'.$i]!="") {
      echo "<img src='".$check['img'.$i]."' onclick='changeurl(\"".$check['img'.$i]."\")' style=' border:#DADBDF solid 1px; height:47px !important; width:65px !important; margin:15px 5px; float:left;'>";
     }
@@ -224,7 +234,7 @@ function loopimg2($check){
 
 function loopimg3($check){
   $num = 0;
-  for ($i=0; $i <=10 ; $i++) { 
+  for ($i=0; $i <=10 ; $i++) {
     if ($check['img'.$i]!="") {
      echo "<li><img src='".$check['img'.$i]."'></li>";
      $num++;
@@ -237,7 +247,7 @@ function loopimg3($check){
 // 这个是movefocus的切图
 function loopimg5($check){
   $num = 0;
-  for ($i=0; $i <=10 ; $i++) { 
+  for ($i=0; $i <=10 ; $i++) {
     if ($check['img'.$i]!="") {
      echo "<li><a onclick='return false;'><img src='".$check['img'.$i]."'></a></li>";
      $num++;
@@ -249,13 +259,13 @@ function loopimg5($check){
 }
 
 function loopimg4($check){
-  for ($i=2; $i <=10 ; $i++) { 
+  for ($i=2; $i <=10 ; $i++) {
     if ($check['img'.$i]!="") {
      echo "<li><i class='arr2'></i><img src='".$check['img'.$i]."'></li>";
     }
   }
 
-} 
+}
 
 
 
@@ -266,7 +276,7 @@ function loopimg4($check){
 // 
 // 
 function is_admin(){
-  $admin2=ruiqia_query_column("SELECT administrator FROM user WHERE id='".$_SESSION['userid']."'"); 
+  $admin2=ruiqia_query_column("SELECT administrator FROM user WHERE id='".$_SESSION['userid']."'");
   if ($admin2!="1") {
     ruiqia_die("您没有发布权限！");
   }

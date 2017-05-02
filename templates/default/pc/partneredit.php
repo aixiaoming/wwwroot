@@ -3,7 +3,7 @@
 <head>
 	<title>【发布法援在线】- 帮帮校园网</title>
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css"/>
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css"/>
     <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="/jquery.form.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />

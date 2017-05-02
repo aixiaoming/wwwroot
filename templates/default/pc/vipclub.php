@@ -6,7 +6,7 @@
     <!--{elseif $type==2}-->
     <title>【vip会员简介】- 帮帮校园网</title>
     <!--{/if}-->
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">

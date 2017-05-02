@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>【帮辅导师团】- 帮帮校园网</title>
-	<link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
 	<link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen"/>
 </head>
@@ -27,7 +27,7 @@
         <img src="/templates/default/pc\images/xia.png" style="display:none;" class="publish">
         <img src="/templates/default/pc\images/shang.png"class="publish"> 
 		</li>
-		<div class="publish">
+		<div class="publish" style="display: none">
 		<li  class="side_center"><a href="published_goods.php">校园二手</a></li>
 		<li class="side_center"><a href="published_schoolnear.php">校园周边</a></li>
 		<li class="side_center"><a href="published_active.php">校园活动</a></li>

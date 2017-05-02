@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>【用户注册】-帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
@@ -117,8 +117,8 @@
     </ul>
     </div>
     <div class="form">
-        <input name="type1" type="radio" value="1" class="radio1"><span>个人</span>
-        <input name="type1" type="radio" value="2" class="radio2"><span>单位</span><br>
+        <input name="type1" type="radio" value="1" class="radio1"><span>个人（在校大学生、社会个人）</span><br/>
+        <input name="type1" type="radio" value="2" class="radio2"><span>单位（企业、事业、机关、社团单位）</span><br>
         <label>　　邮箱</label>
         <input name="email" placeholder="用于登录找回密码"><br>
         <label>　　密码</label>
@@ -136,8 +136,8 @@
     </div>
 
     <div id="form" style="display:none;">
-        <input name="type2" type="radio" value="1" class="radio1"><span>个人</span>
-        <input name="type2" type="radio" value="2" class="radio2"><span>单位</span><br>
+        <input name="type2" type="radio" value="1" class="radio1"><span>个人（在校大学生、社会个人）</span>
+        <input name="type2" type="radio" value="2" class="radio2"><span>单位（企业、事业、机关、社团单位）</span><br>
         <label>　　手机</label>
         <input  id="mobile" name="mobile" placeholder="用于登录找回密码"><br>
         <label>　验证码</label>

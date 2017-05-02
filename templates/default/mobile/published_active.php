@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>【校园活动-我的发布】- 帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/mobile/user_style.css">
 </head>
 
 

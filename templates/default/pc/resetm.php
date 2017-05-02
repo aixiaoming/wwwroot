@@ -2,7 +2,7 @@
 <head>
     <meta charest="utf-8">
     <title>【重置密码】- 帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/jquery.form.js"></script>
     <script src="/lib/waitMe.js"></script>

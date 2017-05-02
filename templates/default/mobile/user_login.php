@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>用户登录 - 帮帮校园网</title>
-        <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+        <link rel="stylesheet" type="text/css" href="./templates/default/mobile/user_style.css">
         <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="/jquery.form.js"></script>
         <script src="/lib/waitMe.js"></script>
@@ -16,7 +16,7 @@
         <script src='/lib/ruiqia.js'></script>
     </head>
 
-<body style="margin:0px;padding:0px;">
+<body style="margin:0px;padding:0px;width: 100%;height: 100%">
     <header style="position: absolute;left: 0px;top: 0px;">
         <a href="index.php"><img src="/templates\default/mobile\images/logo.png"></a>
         <!-- <div class="span">

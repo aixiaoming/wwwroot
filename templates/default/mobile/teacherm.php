@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>帮辅导师团 - 帮帮校园网</title>
-	<link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/mobile/user_style.css">
 	<script type="text/javascript">
     function disp_alert()
     {

@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>【校园周边-我的发布】- 帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
@@ -18,7 +18,7 @@
 
 <div class="right_container">
     <span class="top_span">最近发布信息-校园周边</span>
-    
+
     <!--{if $user['administrator']==1}-->
         <div class="guanli">
         <!--{if $type=="" or $type==null}-->
@@ -43,8 +43,8 @@
             </div>
             <div class="third">
                 <div class="img">
-                <!--{if $key['img1']==''}--> 
-                <img src="/templates/default/pc\images/published.png"> 
+                <!--{if $key['img1']==''}-->
+                <img src="/templates/default/pc\images/published.png">
                 <!--{/if}-->
                 <!--{if $key['img1']!=''}-->
                 <img  src="$key['img1']">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="time">
                    <span>$key['time']</span><br>
-                </div>                
+                </div>
                 <!--{eval $city= substr($key['position'],-6);}-->
                <!--{eval $usercity=ruiqia_query_fetch("select * from area where id='".$city."'");}-->
 
@@ -66,7 +66,7 @@
                <!--{if $usercity['name']!=''}-->
                <span>$usercity['name']</span><span>-校园周边-</span><span>$key['class']</span>
                <!--{/if}-->
-                
+
             </div>
             <div class="four">
                 <form method="post" action="schoolnear_edit.php?querytype=update">
@@ -82,7 +82,7 @@
     <!--{/loop}-->
     $ruiqia_page
     <!--{/if}-->
-    
+
 </div>
 
 </div>

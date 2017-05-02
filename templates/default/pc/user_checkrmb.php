@@ -3,7 +3,7 @@
     <title>【会员申请】- 帮帮校园网</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" />
 </head>
 
@@ -284,7 +284,7 @@ $(document).ready(function() {
        $(".sum").html(sum);
        $.get{'D:\wwwroot\bangbangdream\wwwroot\sdk/example\native_notify.php?id=$_POST['id'];',function(data){
        	v=eval("("+data+")");
-       	if{v.state=='userparing'}{$(".bottom").html('微信嫂买成功');}
+       	if{v.state=='userparing'}{$(".bottom").html('微信购买成功');}
        	if (v.state=='success') {
        		window.clearInterval(t1);
        		if (v.url=='') {

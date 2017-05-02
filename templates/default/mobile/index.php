@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/templates\default\pc\images/favicon.ico" media="screen" /> 
     <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script src='/lib/ruiqia.js'></script>
-    <link rel="stylesheet" type="text/css" href="$dir/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/mobile/css/style.css">
     <script type="text/javascript" src="/jquery.form.js"></script>
 	<script src="/lib/waitMe.js"></script>
 	<link rel="stylesheet" type="text/css" href="/lib/waitMe.css">

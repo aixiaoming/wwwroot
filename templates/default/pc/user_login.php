@@ -4,7 +4,7 @@
     <title>【用户登录】- 帮帮校园网</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/pc/user_style.css">
     <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/jquery.form.js"></script>
     <script src="/lib/waitMe.js"></script>

@@ -29,6 +29,26 @@ if ($user['type']==1) {
       echo '{"title":"手机格式不正确","text":"","type":"warning"}';
       exit(); 
     }
+
+  if (!is_number($phone))
+  {
+
+    echo '{"title":"手机格式不正确","text":"","type":"warning"}';
+    exit();
+  }
+
+  $filename = './data/idcard/'.$_SESSION['userid'].'.jpg';
+
+  if(!file_exists($filename)){
+    echo '{"title":"没有上传身份证正面图片","text":"","type":"warning"}';
+    exit();
+  }
+
+  $filename1 = './data/student/'.$_SESSION['userid'].'.jpg';
+  if(!file_exists($filename1)){
+    echo '{"title":"没有上传学生证","text":"","type":"warning"}';
+    exit();
+  }
   // if (!is_number($qq)) {
 
   //     echo '{"title":"qq格式不正确","text":"","type":"warning"}';
@@ -61,9 +81,8 @@ echo '{"title":"资料上传成功","text":"请等待网站管理员审核通过
   $address = $_POST['address'];
   $license = $_POST['license'];
   $vip = $_POST['vip'];
-  
 
-
+//  TODO
 
   //检查过后插入数据库
   ruiqia_query ("update user set name='$name',introduction='$introduction',phone='$phone',tel='$tel',address='$address',license='$license',vip='$vip',test=3  where id=".$_SESSION['userid'] ." ");

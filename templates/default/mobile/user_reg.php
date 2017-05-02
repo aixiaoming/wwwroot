@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>【用户注册】-帮帮校园网</title>
-    <link rel="stylesheet" type="text/css" href="$dir/user_style.css">
+    <link rel="stylesheet" type="text/css" href="./templates/default/mobile/user_style.css">
     <script src="/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/jquery.form.js"></script>
     <script src="/lib/waitMe.js"></script>
@@ -122,8 +122,12 @@
     </ul>
     </div>
     <div class="form">
-        <input name="type1" type="radio" value="1" class="radio1"><span>个人</span>
-        <input name="type1" type="radio" value="2" class="radio2"><span>单位</span><br>
+      <div style="width: 100%;margin-top: 3%;height: 30px;">
+        <input name="type1" type="radio" value="1" class="radio1"><span>个人（在校大学生、社会个人）</span>
+      </div>
+      <div>
+        <input name="type1" type="radio" value="2" class="radio2"><span>单位（企业、事业、机关、社团单位）</span>
+      </div>
        <!--  <label>　　邮箱</label> -->
         <input name="email" placeholder="请输入邮箱"><br>
         <!-- <label>　　密码</label> -->
@@ -141,8 +145,12 @@
     </div>
 
     <div id="form" style="display:none;">
-        <input name="type2" type="radio" value="1" class="radio1"><span>个人</span>
-        <input name="type2" type="radio" value="2" class="radio2"><span>单位</span><br>
+      <div style="width: 100%;margin-top: 3%;height: 30px;">
+        <input name="type1" type="radio" value="1" class="radio1"><span>个人（在校大学生、社会个人）</span>
+      </div>
+      <div>
+        <input name="type1" type="radio" value="2" class="radio2"><span>单位（企业、事业、机关、社团单位）</span>
+      </div>
        <!--  <label>　　手机</label> -->
         <input  id="mobile" name="mobile" placeholder="请输入手机号"><br>
         <!-- <label>　验证码</label> -->

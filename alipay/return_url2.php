@@ -28,15 +28,14 @@ $verify_result = $alipayNotify->verifyReturn();
 if($verify_result) {//验证成功
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//请在这里加上商户的业务逻辑程序代码
-	$testtime = time()+3600*24*365;
-	
+
 	$user=ruiqia_query_fetch("SELECT * from user WHERE id='".$_SESSION['userid']."'");
 
 	if ($user['type']==1) {
-		ruiqia_query("UPDATE user SET pay=1,test=1,testtime='".$testtime."' where id='".$_SESSION['userid']."'");
+		ruiqia_query("UPDATE user SET pay=1,test=0 where id='".$_SESSION['userid']."'");
 	}
 	if ($user['type']==2) {
-		ruiqia_query("UPDATE user SET pay=1,test=2,testtime='".$testtime."' where id='".$_SESSION['userid']."'");
+		ruiqia_query("UPDATE user SET pay=1,test=0 where id='".$_SESSION['userid']."'");
 	}
 	//——请根据您的业务逻辑来编写程序（以下代码仅作参考）——
     //获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表
@@ -62,7 +61,7 @@ if($verify_result) {//验证成功
       echo "trade_status=".$_GET['trade_status'];
     }
 		
-	header("Location: http://www.bangbangdream.com/time.php");
+	header("Location: http://www.bangbangdream.com//user_check.php");
 
 	//——请根据您的业务逻辑来编写程序（以上代码仅作参考）——
 	

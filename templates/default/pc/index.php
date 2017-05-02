@@ -27,7 +27,7 @@
     }
 </script>
 <title>【帮帮校园网】-大学生校企平台，校园生活服务、兼职、实习、招聘、推广、活动赞助、创新创业校企信息无缝零对接，精准高效节省，安全有保障</title>
-	<link rel="stylesheet" type="text/css" href="$dir/style.css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/pc/style.css">
 
 
 <!-[if IE]>
