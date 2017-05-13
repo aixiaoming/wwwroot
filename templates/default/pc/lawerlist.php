@@ -49,6 +49,7 @@
 		    <!--{if $user['type']==1}--> 
 				 <!--{if $user['test']==0 or $user['test']==3 or $user['test']==4}-->
 				 <li><a href="user_checkrmb.php">315俱乐部</a></li>
+          <li><a href="social.php">社会个人认证会员</a></li>
 				 <li><a href="law_show.php">法援在线</a></li>
 				 <li  style="border-left:3px solid #e96c1f;padding-left:47px;"><a href="user_checkrmb.php"><a href="lawer.php">帮帮律师团</a></li>
 				 <li><a href="teacher.php">帮辅导师团</a></li>
@@ -57,6 +58,7 @@
 				 <!--{/if}-->
 				 <!--{if $user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6}-->
 				 <li><a href="user_checkrmb.php">315俱乐部</a></li>
+          <li><a href="social.php">社会个人认证会员</a></li>
 				 <li><a href="time.php">会员期限</a></li>
 				 <li><a href="law_show.php">法援在线</a></li>
 				 <li  style="border-left:3px solid #e96c1f;padding-left:47px;"><a href="user_checkrmb.php"><a href="lawer.php">帮帮律师团</a></li>
@@ -89,6 +91,7 @@
 		<li class="side_center"><a href="onlinelaw.php">法援在线</a></li>
 		<li class="side_center"><a href="onlinelaw_org.php">法援组织</a></li>
 		<li class="side_center"><a href="club_write.php">315俱乐部</a></li>
+      <li class="side_center"><a href="social_write.php">社会个人认证会员</a></li>
 		<li class="side_center"><a href="user_paywrite.php">企业VIP会员</a></li>
 		<li class="side_center"><a href="vip_write.php">实名验证</a></li>
 		<li class="side_center"><a href="lawer.php"  style="color:#f58710;">帮帮律师团</a></li>

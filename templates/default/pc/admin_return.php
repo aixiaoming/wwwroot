@@ -17,6 +17,7 @@
 <!--{if $type=="" or $type==null}-->
     <div class="lei">
     <a href="admin_return.php" class="type">315会员审核</a>
+    <a href="admin_return.php?type=social">社会个人会员审核</a>
     <a href="admin_return.php?type=real">单位认证审核</a>
     <a href="admin_return.php?type=vip">企业VIP会员审核</a>
     </div>
@@ -64,6 +65,7 @@
 <!--{if $type=="real"}-->
     <div class="lei">
     <a href="admin_return.php">315会员审核</a>
+      <a href="admin_return.php?type=social">社会个人会员审核</a>
     <a href="admin_return.php?type=real" class="type">单位认证审核</a>
     <a href="admin_return.php?type=vip">企业VIP会员审核</a>
     </div>
@@ -114,6 +116,7 @@
 <!--{if $type=="vip"}-->
     <div class="lei">
     <a href="admin_return.php">315会员审核</a>
+      <a href="admin_return.php?type=social">社会个人会员审核</a>
     <a href="admin_return.php?type=real">单位认证审核</a>
     <a href="admin_return.php?type=vip"  class="type">企业VIP会员审核</a>
     </div>
@@ -156,7 +159,55 @@
 	    </div>
 <!--{/if}-->
 
-      
+<!--{if $type=="social"}-->
+<div class="lei">
+  <a href="admin_return.php">315会员审核</a>
+  <a href="admin_return.php?type=social" class="type">社会个人会员审核</a>
+  <a href="admin_return.php?type=real">单位认证审核</a>
+  <a href="admin_return.php?type=vip">企业VIP会员审核</a>
+</div>
+<!--{if $checkuservip==Array ( )}-->
+<div class="kong">暂时没有人要申请成为企业VIP会员哦</div>
+<!--{/if}-->
+<!--{loop $checkuservip $key}-->
+<div class="total2">
+  <div class="left">
+    <span>个人用户: </span>
+    <label>$key['id']</label>
+    <span>　　姓名：</span>
+    <label>$key['name']</label><br>
+    <span>手机号码：</span>
+    <label>$key['phone']</label><br>
+    <span>　　邮箱：</span>
+    <label>$key['email']</label><br>
+    <span>身份证号：</span>
+    <label>$key['idcard']</label><br>
+    <span>通讯地址：</span>
+    <label>$key['address']</label><br>
+    <div class="card1">证件正面</div>
+    <img src="/data/idcard/$key['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" class="img">
+  </div>
+  <div class="right">
+    <div class="card">证件反面</div>
+    <img src="/data/student/$key['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->">
+  </div>
+
+  <form class="form3" method="post"  action="check_return.php">
+    <input name="opinion" type="radio" value="agree" />同意
+    <input name="opinion" type="radio" value="disagree" />不同意<br>
+    <input name="userid" type="hidden"  value="$key['id']">
+    <input name="mobile" type="hidden"  value="$key['phone']">
+    <input type="submit" name="submit" value="确定"  class="submit"/>
+  </form>
+</div>
+
+<!--{/loop}-->
+<div id="pages">
+  $ruiqia_page
+</div>
+<!--{/if}-->
+
+
 </div>
 
 <!--{template user_footer}-->

@@ -44,8 +44,8 @@
         <!--{if $user['administrator']==2}-->
             <!--{if $user['type']==1}--> 
                  <!--{if $user['test']==0 or $user['test']==3 or $user['test']==4}-->
-                 <li  style="border-left:3px solid #e96c1f;padding-left:47px;"><a href="user_checkrmb.php">315俱乐部</a></li>
-          <li><a href="social.php">社会个人认证会员</a></li>
+                 <li><a href="user_checkrmb.php">315俱乐部</a></li>
+                 <li  style="border-left:3px solid #e96c1f;padding-left:47px;"><a href="social.php">社会个人认证会员</a></li>
                  <li><a href="law_show.php">法援在线</a></li>
                  <li><a href="lawer.php">帮帮律师团</a></li>
                  <li><a href="teacher.php">帮辅导师团</a></li>
@@ -53,8 +53,8 @@
                  <li><a href="news.php">我的消息</a></li>
                  <!--{/if}-->
                  <!--{if $user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6}-->
-                 <li style="border-left:3px solid #e96c1f;padding-left:47px;"><a href="user_checkrmb.php">315俱乐部</a></li>
-          <li><a href="social.php">社会个人认证会员</a></li>
+                 <li><a href="user_checkrmb.php">315俱乐部</a></li>
+                 <li  style="border-left:3px solid #e96c1f;padding-left:47px;"><a href="social.php">社会个人认证会员</a></li>
                  <li><a href="time.php">会员期限</a></li>
                  <li><a href="law_show.php">法援在线</a></li>
                  <li><a href="lawer.php">帮帮律师团</a></li>
@@ -103,14 +103,14 @@
 
 <!--{if $user['type']==1}--> 
 <div class="checkrmb_container">
-    <span class="top_span">315俱乐部会员申请</span>
+    <span class="top_span">社会个人认证会员申请</span>
     <div class="bar">
-        <label>315俱乐部简介</label>
+        <label>社会个人认证会员</label>
     </div>
-    <!--{if $club['club']=="" or $club['club']=="null"}-->
+    <!--{if $social['club']=="" or $social['club']=="null"}-->
     <div class="label">管理员还未填写简介哦</div>
     <!--{/if}-->
-    <div class="textarea">$club['club']</div>
+    <div class="textarea">$social['club']</div>
 
 
 <!--{if $user['test']==3}-->
@@ -131,19 +131,19 @@
 <!--{/if}-->
 
 <!--{if $user['test']==0}-->
-    <!--{if $user['pay']==0}-->    
+    <!--{if $user['pay']==0}-->
     <div class="bar">
         <label>充值</label>
     </div>
     <div class="rmb">
         <div>
-        <label  class="pay">申请全国大学生315俱乐部会员，需缴纳会籍费31.5元/年，然后提交会员资料，会员仅限在校大学生。<br><br><label style="color:#ff0000;">（注：付费成功后请等待网页跳转，防止重复扣费。）</label></label><br>
+        <label  class="pay">申请社会个人认证会员，需缴纳会籍费100元/年，然后提交会员资料。<br><br><label style="color:#ff0000;">（注：付费成功后请等待网页跳转，防止重复扣费。）</label></label><br>
        
-        <form method="post" action="/alipay/alipayapi.php">
+        <form method="post" action="/alipay/alipayapisocial.php">
             <input name="WIDout_trade_no" type="hidden" value="$user['id']">
-            <input name="WIDsubject" type="hidden" value="帮帮校园网315俱乐部会员">
-            <input name="WIDtotal_fee" type="hidden" value="31.5">
-            <input name="WIDshow_url" type="hidden" value="http://www.bangbangdream.com/user_checkrmb.php">
+            <input name="WIDsubject" type="hidden" value="帮帮校园网社会个人认证会员">
+            <input name="WIDtotal_fee" type="hidden" value="100">
+            <input name="WIDshow_url" type="hidden" value="http://www.bangbangdream.com/social.php">
             <input type="submit" value="支付宝支付"  class="submit">
         </form>
         
@@ -153,14 +153,24 @@
 
     </div>
     <!--{/if}-->
-    <!--{if $user['pay']==1}-->
+    <!--{if $user['pay']==1 && $user['vip']!=2}-->
+    <div class="bar">
+      <label>资料填写</label>
+    </div>
+    <div class="rmb">
+      <div>
+        您已申请315俱乐部会员，暂不能申请社会个人认证会员。
+      </div>
+    </div>
+    <!--{/if}-->
+    <!--{if $user['pay']==1 && $user['vip']==2}-->
     <div class="bar">
         <label>资料填写</label>
     </div>
     <div class="rmb">
         <div>
         您已经付费成功，请前去<br>
-            <a href="user_check.php"><button style="width: 100px;height: 30px;background-color: #f58710;border:0px;font-size: 16px;color: #fff;border-radius: 4px;cursor: pointer;margin-top: 10px;">填写资料</button></a>
+            <a href="user_checksocial.php"><button style="width: 100px;height: 30px;background-color: #f58710;border:0px;font-size: 16px;color: #fff;border-radius: 4px;cursor: pointer;margin-top: 10px;">填写资料</button></a>
         </div>
     </div>
     <!--{/if}-->
@@ -220,7 +230,6 @@
         </div>
         <div class="rmb">
             <div>
-
             您已经付费成功，请前去<br>
             <a href="user_check.php"><button style="width: 100px;height: 30px;background-color: #f58710;border:0px;font-size: 16px;color: #fff;border-radius: 4px;cursor: pointer;margin-top: 10px;">填写资料</button></a>
             </div>

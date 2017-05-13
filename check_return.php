@@ -67,17 +67,25 @@ $user=ruiqia_query_fetch("SELECT * from user WHERE id='".$userid."'");
 if ($user['type']==1) {
  
 if ($value=='agree') {
-    
-    
-    $post_data = "account=cf_bangbangdr&password=ruiqia.com&mobile=".$mobile."&content=".rawurlencode("恭喜，您已成功成为帮帮校园网315俱乐部会员。");
-     $gets =  xml_to_array(Post($post_data, $target));
-    if($gets['SubmitResult']['code']==2){
-      $_SESSION['mobile'] = $mobile; 
-    }
-    echo $gets['SubmitResult']['msg'];
 
-  ruiqia_query("UPDATE user SET test=1,testtime='".$testtime."' WHERE id='$userid'");
- 
+    if($user['vip']==2){
+      $post_data = "account=cf_bangbangdr&password=ruiqia.com&mobile=".$mobile."&content=".rawurlencode("恭喜，您已成功成为帮帮校园网社会个人认证会员。");
+      $gets =  xml_to_array(Post($post_data, $target));
+      if($gets['SubmitResult']['code']==2){
+        $_SESSION['mobile'] = $mobile;
+      }
+      echo $gets['SubmitResult']['msg'];
+      ruiqia_query("UPDATE user SET test=8,testtime='".$testtime."' WHERE id='$userid'");
+    }else{
+      $post_data = "account=cf_bangbangdr&password=ruiqia.com&mobile=".$mobile."&content=".rawurlencode("恭喜，您已成功成为帮帮校园网315俱乐部会员。");
+      $gets =  xml_to_array(Post($post_data, $target));
+      if($gets['SubmitResult']['code']==2){
+        $_SESSION['mobile'] = $mobile;
+      }
+      echo $gets['SubmitResult']['msg'];
+      ruiqia_query("UPDATE user SET test=1,testtime='".$testtime."' WHERE id='$userid'");
+    }
+
         if ($type=="") {
           header("Location: http://www.bangbangdream.com/admin_return.php");
           exit;
@@ -88,6 +96,10 @@ if ($value=='agree') {
         }
         if ($type=="vip") {
           header("Location: http://www.bangbangdream.com/admin_return.php?type=vip");
+          exit;
+        }
+        if ($type=="social") {
+          header("Location: http://www.bangbangdream.com/admin_return.php?type=social");
           exit;
         }
  
@@ -115,6 +127,10 @@ if ($value=='agree') {
           header("Location: http://www.bangbangdream.com/admin_return.php?type=vip");
           exit;
         }
+      if ($type=="social") {
+        header("Location: http://www.bangbangdream.com/admin_return.php?type=social");
+        exit;
+      }
 
 }
 }else{
@@ -145,7 +161,10 @@ if ($value=='agree') {
           header("Location: http://www.bangbangdream.com/admin_return.php?type=vip");
           exit;
         }
-
+      if ($type=="social") {
+        header("Location: http://www.bangbangdream.com/admin_return.php?type=social");
+        exit;
+      }
 
   }else{
     //验证失败
@@ -168,6 +187,10 @@ if ($value=='agree') {
           header("Location: http://www.bangbangdream.com/admin_return.php?type=vip");
           exit;
         }
+      if ($type=="social") {
+        header("Location: http://www.bangbangdream.com/admin_return.php?type=social");
+        exit;
+      }
   }
   }
 if ($user['vip']==0) {
@@ -196,6 +219,10 @@ if ($user['vip']==0) {
           header("Location: http://www.bangbangdream.com/admin_return.php?type=vip");
           exit;
         }
+    if ($type=="social") {
+      header("Location: http://www.bangbangdream.com/admin_return.php?type=social");
+      exit;
+    }
 
 }else{
   //验证失败
@@ -219,6 +246,10 @@ if ($user['vip']==0) {
           header("Location: http://www.bangbangdream.com/admin_return.php?type=vip");
           exit;
         }
+    if ($type=="social") {
+      header("Location: http://www.bangbangdream.com/admin_return.php?type=social");
+      exit;
+    }
         
 }
 }

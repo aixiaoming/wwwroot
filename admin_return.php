@@ -14,7 +14,7 @@ if ($user['administrator']!=1) {
 $type=$_GET['type'];
 
 if ($type=="") {
-	$checkuser = ruiqia_page("SELECT * from user WHERE test=3 and type=1",5,7,'pages');
+	$checkuser = ruiqia_page("SELECT * from user WHERE test=3 and type=1 and vip!=2",5,7,'pages');
 }
 if ($type=="real") {
 	$checkuserreal = ruiqia_page("SELECT * from user WHERE test=3 and type=2 and vip=0",5,7,'pages');
@@ -22,8 +22,9 @@ if ($type=="real") {
 if ($type=="vip") {
 	$checkuservip = ruiqia_page("SELECT * from user WHERE test=3 and type=2 and vip=1",5,7,'pages');
 }
-
-
+if ($type=="social") {
+  $checkuservip = ruiqia_page("SELECT * from user WHERE test=3 and type=1 and vip=2",5,7,'pages');
+}
 
 
 

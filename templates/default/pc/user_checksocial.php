@@ -101,7 +101,6 @@
 
 
 
-<!--{if $user['type']==1}--> 
 <div class="check_container">
     <span class="top_span">会员申请</span>
     <div class="bar">
@@ -120,52 +119,18 @@
     </div>
     <div class="form">
         <label>　　姓名</label>
-        <input name="name" type="text" value=""><br>
-        <label>在读大学</label>
-        <input name="school" type="text" value="$user['school']"><br>
+        <input name="name" type="text" value="$user['name']"><br>
         <label>　手机号</label>
         <input name="phone" type="text" value="$user['phone']"><br>
-        <label>邮递地址</label>
+        <label>联系地址</label>
         <input name="address" type="text" value="$user['address']"><br>
-        <label>　微信号</label>
-        <input name="qq" type="text" value="$user['qq']"><br>
+        <label>　　邮箱</label>
+        <input name="email" type="text" value="$user['qq']"><br>
         <label>身份证号</label>
         <input name="idcard" type="text" value="$user['idcard']"><br>
         <input type="submit" name="submit" value="提交" class="submit">
     </div>
 </div>
- <!--{elseif $user['type']==2}-->
-<div class="check_container">
-<span class="top_span">会员申请</span>
-<div class="bar">
-        <label>图片上传</label>
-    </div>
-    <div class="img">
-        <img src="/data/idcard/$user['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" onerror=this.src="/data/idcard/license.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
-    </div>
-    
-    <div class="bar">
-        <label>基本信息</label>
-    </div>
-    <form method="post" action="check.php" class="form">
-        <label>单位名称</label>
-        <input name="name" type="text" value=""><br>
-        <label>办公电话</label>
-        <input name="tel" type="text" value="$user['tel']"><br>
-        <label>　　手机</label>
-        <input name="phone" type="text" value="$user['phone']"><br>
-        <input name="vip" type="hidden" value="0">
-        <label>联系地址</label>
-        <input name="address" type="text" value="$user['address']"><br>
-        <div class="textarea"><label>单位简介</label></div>
-        <textarea name="introduction">$user['introduction']</textarea>
-        <input type="submit" name="submit" value="提交" class="submit1">
-    </form>
-    
-</div>
-<!--{/if}-->
-
-
       <input id="fileupload1" type="file" accept='image/jpeg' name="mypic" style="display:none;">
       <input id="fileupload2" type="file" accept='image/jpeg' name="mypic" style="display:none;">
 </div>
@@ -178,7 +143,7 @@
 $(function () {
 // alert($("#userlogoimg").attr('rel'));
 
-    $("#fileupload1").wrap("<form id='myupload' action='/action.php?lei=idcard' method='post' enctype='multipart/form-data'></form>");
+    $("#fileupload1").wrap("<form id='myupload' action='/actionalert.php?lei=idcard' method='post' enctype='multipart/form-data'></form>");
 
 
     $("#fileupload1").change(function(){
@@ -187,19 +152,31 @@ $(function () {
             beforeSend: function() {
 
                 $("#userlogoimg").fadeOut(300);
-                $("#userlogoimg").attr("src",'/data/idcard/load.png');
+                $("#userlogoimg").attr("src",'/data/idcard/idcard.png');
             },
     
             success: function(data) {
-                var url = data.pic + '?rand=' + Math.random();
-                $("#userlogoimg").attr("src", url);
-                $("#userlogoimg").fadeIn(300);
+                if(data.type == 'warning')
+                {
+                    swal({
+                        title: data.title,
+                        text: data.text,
+                        type: data.type,
+                        timer: 2000,
+                        showConfirmButton: false,
+                    });
+                    $("#userlogoimg").fadeIn(300);
+                }
+                else{
+                    var url = data.pic + '?rand=' + Math.random();
+                    $("#userlogoimg").attr("src", url);
+                    $("#userlogoimg").fadeIn(300);
+                }
                 // window.location.href = "/user_check.php";
-                
-        
             },
             error:function(xhr){
-                 $("#userlogoimg").attr("src",'/data/userface/error.jpg');
+                swal('提交失败', '请刷新页面再试试'  , 'error');
+                $("#userlogoimg").attr("src",'/data/userface/error.jpg');
             }
 
 
@@ -210,7 +187,7 @@ $(function () {
 });
 $(function () {
 
-    $("#fileupload2").wrap("<form id='myupload2' action='/action.php?lei=student' method='post' enctype='multipart/form-data'></form>");
+    $("#fileupload2").wrap("<form id='myupload2' action='/actionalert.php?lei=student' method='post' enctype='multipart/form-data'></form>");
 
     $("#fileupload2").change(function(){
         $("#myupload2").ajaxSubmit({
@@ -222,16 +199,29 @@ $(function () {
             },
     
             success: function(data) {
-        
-                var url = data.pic + '?rand=' + Math.random();
-                $("#userlogoimg2").attr("src", url);
-                $("#userlogoimg2").fadeIn(300);
+
+                if(data.type == 'warning')
+                {
+                    swal({
+                        title: data.title,
+                        text: data.text,
+                        type: data.type,
+                        timer: 2000,
+                        showConfirmButton: false,
+                    });
+                    $("#userlogoimg").fadeIn(300);
+                }
+                else{
+                    var url = data.pic + '?rand=' + Math.random();
+                    $("#userlogoimg2").attr("src", url);
+                    $("#userlogoimg2").fadeIn(300);
+                }
+
                 // window.location.href = "/user_check.php";
-                
-        
             },
             error:function(xhr){
-                 $("#userlogoimg2").attr("src",'/data/userface/error.jpg');
+                swal('提交失败', '请刷新页面再试试'  , 'error');
+                $("#userlogoimg2").attr("src",'/data/userface/error.jpg');
             }
 
 
@@ -283,7 +273,7 @@ $(".submit").click(function() {
 // ajax提交数据
          $.ajax({
              type: "post",
-             url: "check.php",
+             url: "checksocial.php",
              dataType: "json",
              async: true,
              cache: false, 
@@ -344,7 +334,7 @@ $(".submit").click(function() {
 
              // 没有发送到服务器
              error:function(msg)
-             {  console.log(msg);
+             {
                  swal('提交失败', '请刷新页面再试试'  , 'error');
          
             },
