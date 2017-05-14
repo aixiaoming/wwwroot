@@ -7,8 +7,10 @@ is_right();
 $user=ruiqia_query_fetch("select * from user where id='".$_SESSION['userid']."'");
 
 if ($user['administrator']==2) {
-	if ($user['test']!=1) {
-		ruiqia_die('您还不是全国大学生315俱乐部会员，请加入后获得帮辅！');
+	if ($user['test']==1 || $user['test']==2 || $user['test']==6 || $user['test']==8) {
+
+	}else{
+    ruiqia_die('您还不是会员，请加入后获得帮辅！');
 	}
 }
 

@@ -32,10 +32,10 @@ $openId = $tools->GetOpenid();
 
 //②、统一下单
 $input = new WxPayUnifiedOrder();
-$input->SetBody("帮帮校园网315俱乐部会员");
-$input->SetAttach("帮帮校园网315俱乐部会员");
+$input->SetBody("帮帮校园网社会个人认证会员");
+$input->SetAttach("帮帮校园网社会个人认证会员");
 $input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
-$input->SetTotal_fee("3150");
+$input->SetTotal_fee("10000");
 $input->SetTime_start(date("YmdHis"));
 $input->SetTime_expire(date("YmdHis", time() + 600));
 $input->SetGoods_tag("");
@@ -84,7 +84,7 @@ if ($user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6
 }
 
 
-$club=ruiqia_query_fetch("select * from club where id=3");
+$club=ruiqia_query_fetch("select * from club where id=8");
 
 // 初始化皮肤引擎
 $template = ruiqia_template::getInstance();

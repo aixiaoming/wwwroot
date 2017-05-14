@@ -29,7 +29,6 @@
 			</div>
 			<!--{elseif $_SESSION['userid']!=''}-->
 			<!--{eval $user=ruiqia_query_fetch("select * from user where id='".$_SESSION['userid']."'");}-->
-			    
                 <!--{if $user['administrator']==1}-->
 					<div class="topright">  
 					<span>$user['username']</span>
@@ -65,8 +64,15 @@
 					    <span><a href="user_profile.php" class="border">个人中心</a></span>
 			            <span><a href="#" id='logout'>退出</a></span>
 					    </div>
-				    <!--{/if}--> 
-                <!--{/if}-->
+          <!--{elseif $user['test']==8}-->
+          <div class="topright">
+            <span>$user['username']</span>
+            <img src="/templates/default/pc\images/yan.png" class="img">
+            <span><a href="user_profile.php" class="border">个人中心</a></span>
+            <span><a href="#" id='logout'>退出</a></span>
+          </div>
+          <!--{/if}-->
+        <!--{/if}-->
 
 
        <!--{/if}-->

@@ -8,7 +8,7 @@ include "function.php";
 is_right();
 $user=ruiqia_query_fetch("SELECT * from user WHERE id='".$_SESSION['userid']."'");
 
-if ($user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6) {
+if ($user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6 or $user['test']==8) {
 	$date = date('Y-m-d',$user['testtime']);
 }else{
 	ruiqia_die('您还不是会员');
@@ -20,7 +20,12 @@ if ($user['administrator']==2) {
 			if (time()>$user['testtime']) {
 			 ruiqia_query("UPDATE user SET test=5,pay=0 where id='".$user['id']."'");
 		    }
-		}	
+		}
+  if ($user['test']==8) {
+    if (time()>$user['testtime']) {
+      ruiqia_query("UPDATE user SET test=5,pay=0,vip=0 where id='".$user['id']."'");
+    }
+  }
 }
 
 
@@ -28,7 +33,7 @@ if ($user['administrator']==2) {
 $template = ruiqia_template::getInstance();
 $template->auto_update = true;
 $template->cache_lifetime = 10;
-
+$template->mobile = true;
 
 
 

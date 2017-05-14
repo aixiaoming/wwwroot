@@ -19,23 +19,23 @@
       <td><a href="/select1.php">发布信息</a></td>
 		</tr>
     <tr>
-      <td><a href="">诚信认证</a></td>
-      <td><a href="">会员期限</a></td>
+      <td><a href="/credit.php">诚信认证</a></td>
+      <td><a href="/time.php">会员期限</a></td>
     </tr>
     <tr>
-      <td><a href="">法律服务</a></td>
-      <td><a href="">法援在线</a></td>
+      <td><a href="/lawerm.php">法律服务</a></td>
+      <td><a href="/law_show.php">法援在线</a></td>
     </tr>
     <tr>
-      <td><a href="">职前培训</a></td>
-      <td><a href="">帮辅导师</a></td>
+      <td><a href="/law_lawshow.php">职前培训</a></td>
+      <td><a href="/teacherm.php">帮辅导师</a></td>
     </tr>
     <tr>
-      <td><a href="">游学联谊</a></td>
-      <td><a href="">活动赞助</a></td>
+      <td><a href="/list.php?class=48&mokuai=active&hit=1&clickid=7">游学联谊</a></td>
+      <td><a href="/list.php?class=47&mokuai=active&hit=1&clickid=7">活动赞助</a></td>
     </tr>
     <tr>
-      <td><a href="">创新创业</a></td>
+      <td><a href="/list.php?clickid=13&mokuai=incubation">创新创业</a></td>
       <td><a href="/list.php?clickid=10&mokuai=parttime">更多服务</a></td>
     </tr>
 <!--    <tr>-->
@@ -59,8 +59,6 @@
 <!--		</tr>-->
 	
 	</table>
-
-
 
 
 <footer>

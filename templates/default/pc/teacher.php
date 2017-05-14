@@ -34,7 +34,7 @@
 		<li class="side_center"><a href="published_find_notice.php">失物招领</a></li>
 		<li class="side_center"><a href="published_recruit.php">招聘应聘</a></li>
 		<li class="side_center"><a href="published_parttime.php">兼职</a></li>
-		<li class="side_center"><a href="published_intern.php">实习</a></li>
+		<li class="side_center"><a href="published_intern.php">实习</a></li><li class="side_center"><a href="published_chuangye.php">创业项目</a></li>
 		<!--{if $user['test']==1}-->
 		<li class="side_center"><a href="published_idea.php">创意集市</a></li>
 		<!--{/if}-->
@@ -53,7 +53,7 @@
 				 <li><a href="list.php?class=169&mokuai=active&hit=1&clickid=7">会员专属活动</a></li>
 				 <li><a href="news.php">我的消息</a></li>
 				 <!--{/if}-->
-				 <!--{if $user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6}-->
+				 <!--{if $user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6 or $user['test']==8}-->
 				 <li><a href="user_checkrmb.php">315俱乐部</a></li>
       <li><a href="social.php">社会个人认证会员</a></li>
 				 <li><a href="time.php">会员期限</a></li>
@@ -70,7 +70,7 @@
                  <li><a href="user_pay.php">企业VIP会员</a></li>
                  <li><a href="news.php">我的消息</a></li>
                  <!--{/if}-->
-                 <!--{if $user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6}-->
+                 <!--{if $user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6 or $user['test']==8}-->
                  <li><a href="time.php">会员期限</a></li>
                  <li><a href="user_checkrmb.php">实名验证申请</a></li>
                  <li><a href="user_pay.php">企业VIP会员</a></li>

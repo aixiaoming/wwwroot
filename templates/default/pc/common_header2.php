@@ -66,6 +66,13 @@
 					    <span><a href="user_profile.php" class="border">个人中心</a></span>
 			            <span><a href="logout2.php?act=logout" id='logout'>退出</a></span>
 					    </div>
+        <!--{elseif $user['test']==8}-->
+        <div class="topright">
+          <span>$user['username']</span>
+          <img src="/templates/default/pc\images/yan.png" class="img">
+          <span><a href="user_profile.php" class="border">个人中心</a></span>
+          <span><a href="logout2.php?act=logout" id='logout'>退出</a></span>
+        </div>
 				    <!--{/if}--> 
                 <!--{/if}-->
 

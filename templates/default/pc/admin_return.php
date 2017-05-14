@@ -35,11 +35,11 @@
 		    <label>$key['school']</label><br>
 		    <span>手机号码：</span>
 		    <label>$key['phone']</label><br>
-		    <span>微信号：</span>
-		    <label>$key['qq']</label><br>
+		    <span>邮箱：</span>
+		    <label>$key['email']</label><br>
 		    <span>身份证号：</span>
 		    <label>$key['idcard']</label><br>
-		    <span>通讯地址：</span>
+		    <span>联系地址：</span>
 		    <label>$key['address']</label><br>
 		    <div class="card1">身份证：</div>
 		    <img src="/data/idcard/$key['id'].jpg?rand=<!--{eval echo mt_rand(1000,9999);}-->" class="img">
@@ -75,14 +75,14 @@
     <!--{loop $checkuserreal $key}-->
         <div class="total2">
 	        <div class="left">
-		        <label>单位用户 : </label>
-		        <label> $key['id']</label><br>
-		        <span>单位名称：</span>
+		      <label>单位用户 : </label>
+		      <label> $key['id']</label><br>
+		      <span>单位名称：</span>
 			    <label>$key['name']</label><br>
 			    <span>手机号码：</span>
 			    <label>$key['phone']</label><br>
-			    <span>办公电话：</span>
-			    <label>$key['tel']</label><br>
+			    <span>联系邮箱：</span>
+			    <label>$key['email']</label><br>
 			    <span>通讯地址：</span>
 			    <label>$key['address']</label><br>
 		        <div class="card1">营业执照：</div>

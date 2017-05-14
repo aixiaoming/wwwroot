@@ -71,7 +71,12 @@ if ($user['administrator']==2) {
 			if (time()>$user['testtime']) {
 			 ruiqia_query("UPDATE user SET test=5,pay=0 where id='".$user['id']."'");
 		    }
-		}	
+		}
+  if ($user['test']==8) {
+    if (time()>$user['testtime']) {
+      ruiqia_query("UPDATE user SET test=5,pay=0,vip=0 where id='".$user['id']."'");
+    }
+  }
 }
 
 if ($user['test']==1 or $user['test']==2 or $user['test']==5 or $user['test']==6) {

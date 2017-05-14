@@ -14,7 +14,7 @@ $num2=ruiqia_query_num('SELECT * FROM user where type=2');
 $usernum=ruiqia_query_num('SELECT * FROM user where test=1 and type=1');
 $realnum=ruiqia_query_num('SELECT * FROM user where test=2 and type=2 and vip=0');
 $realvip=ruiqia_query_num('SELECT * FROM user where test=6 and type=2 and vip=1');
-
+$social=ruiqia_query_num('SELECT * FROM user where test=8 and type=1');
 
 $uservip=ruiqia_page("select * from user where test=5 and vip=1",3,7,'page');
 

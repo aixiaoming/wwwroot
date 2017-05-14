@@ -67,14 +67,17 @@ $password=md5($password);
   }
 
 // 查找用户
-
-if ($user['administrator']==2) {
- 
-   if ($user['test']==1 or $user['test']==2 or $user['test']==6) {
-  if (time()>$user['testtime']) {
-   ruiqia_query("UPDATE user SET test=5 where id='".$user['id']."'");
-}
-}
+if ($user['administrator'] == 2) {
+  if ($user['test'] == 1 or $user['test'] == 2 or $user['test'] == 6) {
+    if (time () > $user['testtime']) {
+      ruiqia_query ("UPDATE user SET test=5,pay=0 where id='" . $user['id'] . "'");
+    }
+  }
+  if ($user['test'] == 8) {
+    if (time () > $user['testtime']) {
+      ruiqia_query ("UPDATE user SET test=5,pay=0,vip=0 where id='" . $user['id'] . "'");
+    }
+  }
 }
 
 

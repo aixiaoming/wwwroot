@@ -29,6 +29,7 @@
         <a href="./alluser.php?type=1"><label class="poin">注册个人会员:</label></a><br>
         <a href="./alluser.php?type=2"><label class="poin">注册单位会员:</label></a><br>
         <a href="./alluser.php?type=3"><label class="poin">315俱乐部会员:</label></a><br>
+        <a href="./alluser.php?type=6"><label class="poin">社会个人认证会员:</label></a><br>
         <a href="./alluser.php?type=4"><label class="poin">实名验证会员:</label></a><br>
         <a href="./alluser.php?type=5"><label class="poin">企业VIP会员:</label></a><br>
       </div>
@@ -36,6 +37,7 @@
         <a href="./alluser.php?type=1"><label class="poin">$num1</label></a><br>
         <a href="./alluser.php?type=2"><label class="poin">$num2</label></a><br>
         <a href="./alluser.php?type=3"><label class="poin">$usernum</label></a><br>
+        <a href="./alluser.php?type=6"><label class="poin">$social</label></a><br>
         <a href="./alluser.php?type=4"><label class="poin">$realnum</label></a><br>
         <a href="./alluser.php?type=5"><label class="poin">$realvip</label></a><br>
       </div>

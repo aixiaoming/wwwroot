@@ -17,6 +17,7 @@ switch ($type){
   case 3:$title = '315俱乐部会员';$lastsql = ' test = 1 and type = 1'; break;
   case 4:$title = '实名验证会员';$lastsql = ' test=2 and type=2 and vip=0'; break;
   case 5:$title = '企业vip会员';$lastsql = ' test=6 and type=2 and vip=1'; break;
+  case 6:$title = '社会个人认证会员';$lastsql = ' test=8'; break;
 }
 
 $sql = 'SELECT * FROM user where ' . $lastsql;

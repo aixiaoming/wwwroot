@@ -58,6 +58,13 @@
 				    <a href="index.php" class="index">返回首页</a>
 				    <a href="#" id='logout'>退出</a>
 				    </div>
+           <!--{elseif $user['test']==8}-->
+             <div class="right">
+               <span>$user['username']</span>
+               <img src="/templates/default/pc\images/yan.png" class="img">
+               <a href="index.php" class="index">返回首页</a>
+               <a href="#" id='logout'>退出</a>
+             </div>
 				    <!--{/if}--> 
 		<!--{/if}-->
 			 

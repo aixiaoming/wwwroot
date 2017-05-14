@@ -16,64 +16,59 @@
     </div>
     <!-- <div class="picture"> -->
         <div class="img1">
-           <img src="/data/idcard/$user['id'].jpg" onerror=this.src="/data/idcard/idcard.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
+           <img src="/data/idcard/$user['id'].jpg" onerror=this.src="/data/idcard/socialz.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
         </div>
         <div class="img2">
-          <img src="/data/student/$user['id'].jpg" onerror=this.src="/data/idcard/student.png" id="userlogoimg2" onclick="document.getElementById('fileupload2').click()">
+          <img src="/data/student/$user['id'].jpg" onerror=this.src="/data/idcard/socialf.png" id="userlogoimg2" onclick="document.getElementById('fileupload2').click()">
         </div>
     <!--  </div> -->
     <div class="bar">
         <label>基本信息</label>
     </div>
     <div class="form">
-        <label>　　姓名</label>
-        <input name="name" type="text" value=""><br>
-        <label>在读大学</label>
-        <input name="school" type="text" value="$user['school']"><br>
-        <label>　手机号</label>
-        <input name="phone" type="text" value="$user['phone']"><br>
-        <label>邮递地址</label>
-        <input name="address" type="text" value="$user['address']"><br>
-        <label>　　邮箱</label>
-        <input name="email" type="text" value="$user['email']"><br>
-        <label>身份证号</label>
-        <input name="idcard" type="text" value="$user['idcard']"><br>
+      <label>　　姓名</label>
+      <input name="name" type="text" value="$user['name']"><br>
+      <label>　手机号</label>
+      <input name="phone" type="text" value="$user['phone']"><br>
+      <label>联系地址</label>
+      <input name="address" type="text" value="$user['address']"><br>
+      <label>　　邮箱</label>
+      <input name="email" type="text" value="$user['qq']"><br>
+      <label>身份证号</label>
+      <input name="idcard" type="text" value="$user['idcard']"><br>
         <input type="submit" name="submit" value="提交" class="submit">
     </div>
 </div>
  <!--{elseif $user['type']==2}-->
-<div class="check_container" style="text-align: center">
-  <p>单位用户请前往电脑版。</p>
+<div class="check_container">
 <!-- <span class="top_span">会员申请</span> -->
-<!--<div class="bar">-->
-<!--        <label>图片上传</label>-->
-<!--    </div>-->
-<!--    <div class="img">-->
-<!--        <img src="/data/idcard/$user['id'].jpg" onerror=this.src="/data/idcard/license.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">-->
-<!--    </div>-->
-<!--    -->
-<!--    <div class="bar">-->
-<!--        <label>基本信息</label>-->
-<!--    </div>-->
-<!--    <form method="post" action="check.php" class="form">-->
-<!--        <label>单位名称</label>-->
-<!--        <input name="name" type="text" value=""><br>-->
-<!--        <label>　　座机</label>-->
-<!--        <input name="tel" type="text" value="$user['tel']"><br>-->
-<!--        <label>邮递地址</label>-->
-<!--        <input name="address" type="text" value="$user['address']"><br>-->
-<!--        <div class="textarea"><label>单位简介</label></div>-->
-<!--        <textarea name="introduction">$user['introduction']</textarea>-->
-<!--        <input type="submit" name="submit" value="提交" class="submit1">-->
-<!--    </form>-->
-<!--    -->
-<!--</div>-->
+<div class="bar">
+        <label>图片上传</label>
+    </div>
+    <div class="img">
+        <img src="/data/idcard/$user['id'].jpg" onerror=this.src="/data/idcard/license.png" id="userlogoimg" onclick="document.getElementById('fileupload1').click()">
+    </div>
+    
+    <div class="bar">
+        <label>基本信息</label>
+    </div>
+    <form method="post" action="check.php" class="form">
+        <label>单位名称</label>
+        <input name="name" type="text" value=""><br>
+        <label>　　座机</label>
+        <input name="tel" type="text" value="$user['tel']"><br>
+        <label>邮递地址</label>
+        <input name="address" type="text" value="$user['address']"><br>
+        <div class="textarea"><label>单位简介</label></div>
+        <textarea name="introduction">$user['introduction']</textarea>
+        <input type="submit" name="submit" value="提交" class="submit1">
+    </form>
+    
+</div>
 <!--{/if}-->
-
 
       <input id="fileupload1" type="file" accept='image/jpeg' name="mypic" style="display:none;">
       <input id="fileupload2" type="file" accept='image/jpeg' name="mypic" style="display:none;">
-
 
 <footer>
 <span>© Bangbangdream.com</span>
@@ -85,7 +80,7 @@
 $(function () {
 // alert($("#userlogoimg").attr('rel'));
 
-    $("#fileupload1").wrap("<form id='myupload' action='/action.php?lei=idcard' method='post' enctype='multipart/form-data'></form>");
+    $("#fileupload1").wrap("<form id='myupload' action='/actionalert.php?lei=idcard' method='post' enctype='multipart/form-data'></form>");
 
 
     $("#fileupload1").change(function(){
@@ -97,10 +92,23 @@ $(function () {
                 $("#userlogoimg").attr("src",'/data/idcard/load.png');
             },
             success: function(data) {
-        
-                var url = data.pic + '?rand=' + Math.random();
-                $("#userlogoimg").attr("src", url);
-                $("#userlogoimg").fadeIn(300);
+                if(data.type == 'warning')
+                {
+                    swal({
+                        title: data.title,
+                        text: data.text,
+                        type: data.type,
+                        timer: 2000,
+                        showConfirmButton: false,
+                    });
+                    $("#userlogoimg").attr("src",'/data/idcard/socialz.png');
+                    $("#userlogoimg").fadeIn(300);
+                }
+                else{
+                    var url = data.pic + '?rand=' + Math.random();
+                    $("#userlogoimg").attr("src", url);
+                    $("#userlogoimg").fadeIn(300);
+                }
                 // window.location.href = "/user_check.php";
             },
             error:function(xhr){
@@ -115,7 +123,7 @@ $(function () {
 });
 $(function () {
 
-    $("#fileupload2").wrap("<form id='myupload2' action='/action.php?lei=student' method='post' enctype='multipart/form-data'></form>");
+    $("#fileupload2").wrap("<form id='myupload2' action='/actionalert.php?lei=student' method='post' enctype='multipart/form-data'></form>");
 
     $("#fileupload2").change(function(){
         $("#myupload2").ajaxSubmit({
@@ -127,10 +135,24 @@ $(function () {
             },
     
             success: function(data) {
-        
-                var url = data.pic + '?rand=' + Math.random();
-                $("#userlogoimg2").attr("src", url);
-                $("#userlogoimg2").fadeIn(300);
+                if(data.type == 'warning')
+                {
+                    swal({
+                        title: data.title,
+                        text: data.text,
+                        type: data.type,
+                        timer: 2000,
+                        showConfirmButton: false,
+                    });
+                    $("#userlogoimg").attr("src",'/data/idcard/socialf.png');
+                    $("#userlogoimg").fadeIn(300);
+                }
+                else{
+                    var url = data.pic + '?rand=' + Math.random();
+                    $("#userlogoimg2").attr("src", url);
+                    $("#userlogoimg2").fadeIn(300);
+                }
+
                 // window.location.href = "/user_check.php";
                 
         
@@ -163,7 +185,7 @@ $(".submit").click(function() {
 // ajax提交数据
          $.ajax({
              type: "post",
-             url: "check.php",
+             url: "checksocial.php",
              dataType: "json",
              async: true,
              cache: false, 
@@ -207,7 +229,7 @@ $(".submit").click(function() {
 
                    });
  
-                   ruiqia_location('/user_check.php',1500);
+                   ruiqia_location('/socialm.php',1500);
 
                 }
 

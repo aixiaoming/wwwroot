@@ -3,7 +3,11 @@ include 'function.php';
 
 	$picname = $_FILES['mypic']['name'];
 	$picsize = $_FILES['mypic']['size'];
-	
+	$picerror = $_FILES['mypic']['error'];
+	if($picerror){
+    echo '{"title":"图片过大，请处理后上传","text":"","type":"warning"}';
+    exit();
+	}
 	if ($picname !="") {
     if ($picsize > 5024000) {
       echo '{"title":"图片过大，请处理后上传","text":"","type":"warning"}';
