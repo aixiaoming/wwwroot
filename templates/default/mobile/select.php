@@ -35,29 +35,9 @@
       <td><a href="/list.php?class=47&mokuai=active&hit=1&clickid=7">活动赞助</a></td>
     </tr>
     <tr>
-      <td><a href="/list.php?clickid=13&mokuai=incubation">创新创业</a></td>
+      <td><a href="/mb_incubation.php">创新创业</a></td>
       <td><a href="/list.php?clickid=10&mokuai=parttime">更多服务</a></td>
     </tr>
-<!--    <tr>-->
-<!--			<td><a href="/lawerm.php">帮帮律师团</a></td>-->
-<!--			<td><a href="/teacherm.php">帮辅导师团</a></td>-->
-<!--		</tr>-->
-<!--		<tr>-->
-<!--			<td><a href="/list.php?clickid=6&mokuai=goods">校园二手</a></td>-->
-<!--			<td><a href="/list.php?clickid=8&mokuai=schoolnear">校园周边</a></td>-->
-<!--		</tr>-->
-<!--		<tr>-->
-<!--			<td><a href="/list.php?clickid=7&mokuai=active">校园活动</a></td>-->
-<!--			<td><a href="/list.php?clickid=9&mokuai=find_notice">失物招领</a></td>-->
-<!--		</tr>-->
-<!--		<tr>-->
-<!--			<td><a href="/select1.php">发布信息</a></td>-->
-<!--			<td><a href="/list.php?class=169&mokuai=active&hit=1&clickid=7">专属活动</a></td>-->
-<!--		</tr>-->
-<!--		<tr>-->
-<!--			<td><a href="/user_checkrmbm.php">315俱乐部</a></td>-->
-<!--		</tr>-->
-	
 	</table>
 
 
